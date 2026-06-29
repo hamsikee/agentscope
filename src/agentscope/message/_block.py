@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """The content blocks of messages."""
-from enum import StrEnum
+from enum import StrEnum 
 from typing import Literal, List, TypeAlias, Any
 from pydantic import BaseModel, Field, AnyUrl, field_serializer, ConfigDict
 
@@ -17,7 +17,7 @@ class TextBlock(BaseModel):
     """The text content of the block."""
     id: str = Field(default_factory=_generate_id)
     """The unique identifier of the block."""
-
+#message의 메인 빌딩블록. 가장 간단한형태(textblock)
 
 class ThinkingBlock(BaseModel):
     """The thinking block.
